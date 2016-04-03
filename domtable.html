@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Make a table through the DOM</title>
+	</head>
+	<body>
+		<script>
+			var html = document.documentElement;
+			var body = html.lastChild;
+			var table = document.createElement("table");
+			
+			var tr1 = document.createElement("tr");
+			var tr2 = document.createElement("tr");
+			var tr3 = document.createElement("tr");
+			
+			var td1 = document.createElement("td");
+			var td2 = document.createElement("td");
+			var td3 = document.createElement("td");
+			var td4 = document.createElement("td");
+			var td5 = document.createElement("td");
+			var td6 = document.createElement("td");
+			var td7 = document.createElement("td");
+			var td8 = document.createElement("td");
+			var td9 = document.createElement("td");
+			
+			var text1 = document.createTextNode("Car");
+			var text2 = document.createTextNode("Top Speed");
+			var text3 = document.createTextNode("Price");
+			var text4 = document.createTextNode("Chevrolet");
+			var text5 = document.createTextNode("120mph");
+			var text6 = document.createTextNode("$10,000");
+			var text7 = document.createTextNode("Pontiac");
+			var text8 = document.createTextNode("140mph");
+			var text9 = document.createTextNode("$20,000");
+			
+			var currentNode = body;
+			currentNode.appendChild(table);
+			currentNode = currentNode.lastChild;
+			currentNode.appendChild(tr1);
+			currentNode = currentNode.firstChild;
+			currentNode.appendChild(td1);
+			currentNode = currentNode.firstChild;
+			currentNode.appendChild(text1);
+			currentNode = currentNode.parentNode;
+			currentNode.appendChild(td2);
+			currentNode = currentNode.firstChild.nextSibling;
+			currentNode.appendChild(text2);
+			currentNode = currentNode.parentNode;
+			currentNode.appendChild(td3);
+			currentNode = currentNode.lastChild;
+			currentNode.appendChild(text3);
+			currentNode = currentNode.parentNode.parentNode;
+			currentNode.appendChild(tr2);
+			currentNode = currentNode.lastChild;
+			currentNode.appendChild(td4);
+			currentNode = currentNode.firstChild;
+			currentNode.appendChild(text4);
+			currentNode = currentNode.parentNode;
+			currentNode.appendChild(td5);
+			currentNode = currentNode.firstChild.nextSibling;
+			currentNode.appendChild(text5);
+			currentNode = currentNode.parentNode;
+			currentNode.appendChild(td6);
+			currentNode = currentNode.lastChild;
+			currentNode.appendChild(text6);
+			currentNode = currentNode.parentNode.parentNode;
+			currentNode.appendChild(tr3);
+			currentNode = currentNode.lastChild;
+			currentNode.appendChild(td7);
+			currentNode = currentNode.firstChild;
+			currentNode.appendChild(text7);
+			currentNode = currentNode.parentNode;
+			currentNode.appendChild(td8);
+			currentNode = currentNode.firstChild.nextSibling;
+			currentNode.appendChild(text8);
+			currentNode = currentNode.parentNode;
+			currentNode.appendChild(td9);
+			currentNode = currentNode.lastChild;
+			currentNode.appendChild(text9);
+		</script>
+	</body>
+</html>
